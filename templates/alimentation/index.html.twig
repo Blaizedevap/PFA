@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TeckController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello ALIMENTATION ✅</h1>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <a href="checkout?id={{datas.prix}}"><img src="content/alimentation/{{datas.root}}.jpg" class="d-block w-100" alt="..." height=250px ></a>
+     <br><span>{{datas.prix}}</span><span>dh</span>
+    </div>
+    <div class="carousel-item">
+    <a href="checkout?id={{datas1.prix}}"><img src="content/alimentation/{{datas1.root}}.jpg" class="d-block w-100" alt="..." height=250px ></a>
+    <br><span>{{datas1.prix}}<span>dh</span>
+    </div>
+    <div class="carousel-item">
+    <a href="checkout?id={{datas2.prix}}"><img src="content/alimentation/{{datas2.root}}.jpg" class="d-block w-100" alt="..." height=250px ></a>
+    <br><span>{{datas2.prix}}</span><span>dh</span>
+    </div>
+    <div class="carousel-item">
+     <a href="checkout?id={{datas3.prix}}"><img src="content/alimentation/{{datas3.root}}.jpg" class="d-block w-100" alt="..." height=250px ></a>
+    <br><span>{{datas3.prix}}</span><span>dh</span>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+{% endblock %}

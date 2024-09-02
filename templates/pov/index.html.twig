@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AviController!{% endblock %}
+
+{% block body %}
+    <body>
+    <center>
+    <h1 style="color:white">Votre opinion est précieuse. Laissez un avis et faites la différence !</h1>
+    </center>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+        <button id="openFormButton">Donne ton avis!</button>
+
+    <!-- La modale -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            {{ form_start(form,{'attr': {'id': 'feedbackForm'}}) }}
+                {{ form_widget(form) }}
+                <button type="submit" id="bsended">Send</button>
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+      
+    </body>
+{% endblock %}
+
